@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Electrical Services - Licensed Electricians</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 .highlight {
+            color: #fbbf24;
+            display: block;
+        }
+
+        .hero-content p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: #fbbf24;
+            color: #1a202c;
+            padding: 1.3rem 2.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5);
+            background: #f59e0b;
+        }
+
+        .cta-button i {
+            font-size: 1.4rem;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+
+        .hero-feature i {
+            font-size: 1.8rem;
+            color: #fbbf24;
+        }
+
+        .hero-feature span {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fbbf24;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .services {
+            padding: 6rem 2rem;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(30, 58, 138, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3b82f6, #1e3a8a);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-list li {
+            padding: 0.6rem 0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .service-list li i {
+            color: #3b82f6;
+            font-size: 0.9rem;
+        }
+
+        .about {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .about-feature {
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .about-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #eff6ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .about-feature-icon i {
+            color: #3b82f6;
+            font-size: 1.5rem;
+        }
+
+        .about-feature h4 {
+            font-size: 1.3rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .about-feature p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .process {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            font-weight: 800;
+            border: 3px solid #fbbf24;
+        }
+
+        .process-step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+        }
+
+        .faq {
+            padding: 6rem 2rem;
+            background: #f8fafc;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            color: #1a202c;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-question i {
+            color: #3b82f6;
+        }
+
+        .faq-answer {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .final-cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: #1a202c;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-about h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-links a:hover {
+            color: #fbbf24;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 2rem auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            margin: 2rem;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #64748b;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #f1f5f9;
+            color: #1a202c;
+        }
+
+        .modal-content h2 {
+            color: #1e3a8a;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .modal-content h3 {
+            color: #1a202c;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .modal-content p {
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content li {
+            color: #475569;
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .hero-features {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 2rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Expert Electrical Services
+                    <span class="highlight">For Your Home</span>
+                </h1>
+                <p>Professional electrical solutions from licensed and experienced electricians. From routine repairs to complete system installations, we deliver safe, reliable service you can trust.</p>
+                
+                <div class="cta-group">
+                    <a href="tel:+18882174210" class="cta-button">
+                        <i class="fas fa-phone-alt"></i>
+                        (888) 217-4210
+                    </a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Licensed Professionals</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Prompt Service</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Safety Guaranteed</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span>Quality Workmanship</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-image-card">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Available</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Fast</span>
+                            <span class="stat-label">Response Time</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Pro</span>
+                            <span class="stat-label">Electricians</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comprehensive Electrical Services</h2>
+                <p class="section-subtitle">From simple repairs to complex installations, we handle all your residential electrical needs with expertise and care.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Electrical Inspections</h3>
+                    <p>Comprehensive safety inspections to identify potential hazards and ensure your electrical system meets current codes and standards.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Complete system evaluation</li>
+                        <li><i class="fas fa-check"></i> Code compliance verification</li>
+                        <li><i class="fas fa-check"></i> Detailed safety reports</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Electrical Repair</h3>
+                    <p>Expert troubleshooting and repair services for all electrical issues, from flickering lights to circuit breaker problems.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Outlet and switch repair</li>
+                        <li><i class="fas fa-check"></i> Circuit troubleshooting</li>
+                        <li><i class="fas fa-check"></i> Emergency repairs</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Electrical Panels</h3>
+                    <p>Professional panel upgrades and replacements to accommodate increased power demands and improve home safety.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Panel upgrades</li>
+                        <li><i class="fas fa-check"></i> Breaker replacement</li>
+                        <li><i class="fas fa-check"></i> Capacity expansion</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Wiring & Rewiring</h3>
+                    <p>Complete home wiring solutions including new construction wiring, rewiring older homes, and adding new circuits.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Home rewiring</li>
+                        <li><i class="fas fa-check"></i> New circuit installation</li>
+                        <li><i class="fas fa-check"></i> Wire upgrades</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3>Whole-Home Generators</h3>
+                    <p>Installation and maintenance of backup power systems to keep your home running smoothly during power outages.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Generator installation</li>
+                        <li><i class="fas fa-check"></i> Maintenance services</li>
+                        <li><i class="fas fa-check"></i> Transfer switch setup</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Indoor & Outdoor Lighting</h3>
+                    <p>Professional lighting installation and design services to enhance your home's beauty, safety, and functionality.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Interior lighting design</li>
+                        <li><i class="fas fa-check"></i> Landscape lighting</li>
+                        <li><i class="fas fa-check"></i> Security lighting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Why Choose Our Electrical Services?</h2>
+                    <p>We understand that electrical work requires precision, expertise, and a commitment to safety. Our team of licensed electricians brings years of experience and dedication to every project, ensuring your home's electrical system is safe, efficient, and reliable.</p>
+                    <p>Whether you need a simple repair or a complex installation, we approach every job with the same level of professionalism and attention to detail. Your safety and satisfaction are our top priorities.</p>
+                </div>
+
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div>
+                            <h4>Licensed & Insured</h4>
+                            <p>All work performed by fully licensed and insured electricians who meet industry standards and local regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div>
+                            <h4>Quality Workmanship</h4>
+                            <p>We take pride in delivering high-quality electrical work that stands the test of time and exceeds expectations.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4>Excellent Support</h4>
+                            <p>From your first call to project completion, we provide clear communication and responsive customer service.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <div class="about-feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div>
+                            <h4>Modern Equipment</h4>
+                            <p>We use the latest tools and technology to diagnose problems accurately and complete work efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Simple Process, Outstanding Results</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Getting professional electrical service has never been easier. Follow these simple steps to get started.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Call us to discuss your electrical needs. We'll ask about your project and answer any questions you have.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <h3>Assessment</h3>
+                    <p>We'll evaluate your electrical system and provide a clear explanation of the work needed and timeline.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <h3>Quality Work</h3>
+                    <p>Our licensed electricians perform the work safely and efficiently, keeping your home clean and organized.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <h3>Final Check</h3>
+                    <p>We thoroughly test all work to ensure everything functions properly and meets safety standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our electrical services.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        What areas do you serve?
+                    </div>
+                    <div class="faq-answer">
+                        We provide electrical services throughout our service area. Call us to confirm we serve your location and to schedule an appointment for your electrical needs.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        Are your electricians licensed and insured?
+                    </div>
+                    <div class="faq-answer">
+                        Yes, all electricians working on your project are fully licensed and insured. We maintain all necessary certifications and insurance coverage to protect you and your property.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        Do you handle emergency electrical repairs?
+                    </div>
+                    <div class="faq-answer">
+                        Yes, we understand that electrical emergencies can happen at any time. Contact us immediately if you're experiencing an electrical emergency such as power outages, sparking outlets, or burning smells from electrical components.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        How long does typical electrical work take?
+                    </div>
+                    <div class="faq-answer">
+                        The timeline varies depending on the scope of work. Simple repairs may take just a few hours, while larger projects like panel upgrades or whole-home rewiring can take several days. We'll provide a clear timeline when we assess your project.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        What should I do if I smell burning from an outlet?
+                    </div>
+                    <div class="faq-answer">
+                        If you smell burning from an outlet or electrical panel, turn off power to that circuit immediately and call us right away. This could indicate a serious electrical problem that requires immediate professional attention.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fas fa-question-circle"></i>
+                        Do you provide warranties on your work?
+                    </div>
+                    <div class="faq-answer">
+                        We stand behind the quality of our work and materials. We'll discuss specific warranty details for your project when we provide your service information.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Call now to discuss your electrical needs with our professional team</p>
+            <a href="tel:+18882174210" class="cta-button">
+                <i class="fas fa-phone-alt"></i>
+                (888) 217-4210
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3><i class="fas fa-bolt"></i> Electrical Services</h3>
+                <p>Professional electrical solutions for your home. Licensed, experienced electricians dedicated to safety and quality workmanship.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a>Electrical Inspections</a></li>
+                    <li><a>Repairs & Maintenance</a></li>
+                    <li><a>Panel Upgrades</a></li>
+                    <li><a>Wiring Services</a></li>
+                    <li><a>Generator Installation</a></li>
+                    <li><a>Lighting Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Information</h4>
+                <ul>
+                    <li><a onclick="openModal('privacy')">Privacy Policy</a></li>
+                    <li><a onclick="openModal('terms')">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Electrical Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('privacy')">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> September 30, 2025</p>
+            
+            <h3>1. Information We Collect</h3>
+            <p>We collect information that you provide to us when you contact us for electrical services, including:</p>
+            <ul>
+                <li>Your name, phone number, and address</li>
+                <li>Details about your electrical service needs</li>
+                <li>Communication records between you and our team</li>
+            </ul>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide and deliver electrical services you request</li>
+                <li>Communicate with you about your service appointments</li>
+                <li>Respond to your inquiries and customer service requests</li>
+                <li>Improve our services and customer experience</li>
+            </ul>
+
+            <h3>3. Information Sharing</h3>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+            <ul>
+                <li>With service providers who assist in our operations</li>
+                <li>When required by law or to protect our legal rights</li>
+                <li>With your explicit consent</li>
+            </ul>
+
+            <h3>4. Data Security</h3>
+            <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure.</p>
+
+            <h3>5. Your Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access the personal information we hold about you</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Opt-out of marketing communications</li>
+            </ul>
+
+            <h3>6. Cookies and Tracking</h3>
+            <p>Our website may use cookies and similar technologies to enhance your browsing experience and analyze site traffic. You can control cookies through your browser settings.</p>
+
+            <h3>7. Third-Party Links</h3>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of these external sites.</p>
+
+            <h3>8. Children's Privacy</h3>
+            <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children.</p>
+
+            <h3>9. Changes to This Policy</h3>
+            <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated effective date.</p>
+
+            <h3>10. Contact Us</h3>
+            <p>If you have questions about this privacy policy or how we handle your information, please contact us at (888) 217-4210.</p>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('terms')">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Terms & Conditions</h2>
+            <p><strong>Effective Date:</strong> September 30, 2025</p>
+            
+            <h3>1. Acceptance of Terms</h3>
+            <p>By contacting us or using our electrical services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.</p>
+
+            <h3>2. Services Provided</h3>
+            <p>We provide professional electrical services including but not limited to:</p>
+            <ul>
+                <li>Electrical inspections and safety assessments</li>
+                <li>Electrical repairs and troubleshooting</li>
+                <li>Electrical panel upgrades and replacements</li>
+                <li>Home wiring and rewiring services</li>
+                <li>Generator installation and maintenance</li>
+                <li>Indoor and outdoor lighting installation</li>
+            </ul>
+
+            <h3>3. Service Requests</h3>
+            <p>When you contact us for service, you agree to provide accurate and complete information about your electrical needs. Service availability is subject to our scheduling and your location within our service area.</p>
+
+            <h3>4. Pricing and Payment</h3>
+            <p>Pricing for services will be communicated to you prior to work being performed. Payment terms will be discussed during the service consultation. All prices are subject to change based on the scope of work discovered during service.</p>
+
+            <h3>5. Scheduling and Cancellations</h3>
+            <p>We strive to accommodate your preferred scheduling times. If you need to cancel or reschedule an appointment, please contact us as soon as possible. Cancellation policies will be communicated when scheduling services.</p>
+
+            <h3>6. Homeowner Responsibilities</h3>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Providing safe access to electrical systems and work areas</li>
+                <li>Verifying that contractors have necessary licenses and insurance</li>
+                <li>Obtaining any required permits for electrical work</li>
+                <li>Disclosing any known hazards or special conditions</li>
+                <li>Ensuring pets and children are kept away from work areas</li>
+            </ul>
+
+            <h3>7. Warranties and Guarantees</h3>
+            <p>We stand behind the quality of our work. Specific warranty information will be provided for your particular service. Warranties do not cover damage resulting from misuse, neglect, or circumstances beyond our control.</p>
+
+            <h3>8. Limitation of Liability</h3>
+            <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from or related to our services. Our liability is limited to the amount you paid for the specific service in question.</p>
+
+            <h3>9. Emergency Services</h3>
+            <p>For electrical emergencies, contact us immediately. Emergency service availability and pricing may differ from standard services. In case of immediate danger, contact emergency services first.</p>
+
+            <h3>10. Code Compliance</h3>
+            <p>All electrical work will be performed in accordance with applicable local and national electrical codes. Additional work may be required to bring existing systems up to current code requirements.</p>
+
+            <h3>11. Permits and Inspections</h3>
+            <p>Certain electrical work may require permits and inspections by local authorities. We will inform you if permits are needed for your project. Permit costs are typically separate from service fees.</p>
+
+            <h3>12. Property Damage</h3>
+            <p>While we take great care to protect your property during service, you should remove or protect valuable items in work areas. We carry insurance to cover any damage caused by our work.</p>
+
+            <h3>13. Intellectual Property</h3>
+            <p>All content on our website, including text, graphics, and logos, is our property and protected by copyright laws. You may not reproduce or distribute our content without permission.</p>
+
+            <h3>14. Privacy</h3>
+            <p>Your use of our services is also governed by our Privacy Policy. Please review our Privacy Policy to understand how we collect and use your information.</p>
+
+            <h3>15. Modifications to Terms</h3>
+            <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of modified terms.</p>
+
+            <h3>16. Governing Law</h3>
+            <p>These Terms and Conditions are governed by and construed in accordance with applicable federal and state laws. Any disputes shall be resolved in the appropriate courts.</p>
+
+            <h3>17. Severability</h3>
+            <p>If any provision of these Terms and Conditions is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that these Terms and Conditions shall otherwise remain in full force and effect.</p>
+
+            <h3>18. Contact Information</h3>
+            <p>For questions about these Terms and Conditions or our services, please contact us at (888) 217-4210.</p>
+
+            <h3>19. Entire Agreement</h3>
+            <p>These Terms and Conditions, along with our Privacy Policy, constitute the entire agreement between you and us regarding the use of our services.</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            const modal = document.getElementById(type + 'Modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
