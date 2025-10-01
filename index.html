@@ -479,14 +479,35 @@
             color: #fbbf24;
         }
 
+        .footer-disclaimer {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 8px;
+        }
+
+        .footer-disclaimer h4 {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .footer-disclaimer p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
         .footer-bottom {
             max-width: 1400px;
             margin: 2rem auto 0;
             text-align: center;
             font-size: 0.9rem;
         }
-
-
 
         .modal {
             display: none;
@@ -962,12 +983,15 @@
             </div>
         </div>
 
+        <div class="footer-disclaimer">
+            <h4><i class="fas fa-info-circle"></i> Affiliate Disclosure</h4>
+            <p>This website is a referral service that connects consumers with service providers in their area. We may receive compensation when you call the phone number displayed on this website. This compensation helps us provide this free service to you. The service providers in our network are independent contractors and are not affiliated with or endorsed by this website. We do not guarantee the quality, timeliness, or outcome of services provided by these independent contractors. All calls are subject to verification and may be recorded for quality assurance purposes.</p>
+        </div>
+
         <div class="footer-bottom">
             <p>&copy; 2025 Electrical Services. All rights reserved.</p>
         </div>
     </footer>
-
-
 
     <div id="privacyModal" class="modal">
         <div class="modal-content">
@@ -1126,7 +1150,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 event.target.classList.remove('active');
@@ -1134,7 +1157,6 @@
             }
         }
 
-        // Close modal on escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 document.querySelectorAll('.modal').forEach(modal => {
